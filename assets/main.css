@@ -1,0 +1,270 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+body{
+	background: #fff;
+	color: #333;
+	font-family: "Calluna Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+ol{
+	list-style-position: inside;
+}
+.dumb-space{
+	letter-spacing: -.15em;
+}
+@font-face {
+	font-family: 'Title Serif';
+	src: url('fonts/source-han-serif-sc.eot');
+	src:
+	  url('fonts/source-han-serif-sc.eot?#font-spider') format('embedded-opentype'),
+	  url('fonts/source-han-serif-sc.woff') format('woff'),
+	  url('fonts/source-han-serif-sc.ttf') format('truetype'),
+	  url('fonts/source-han-serif-sc.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+/*~Slides*/
+.slide{
+	height: 90vh;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	position: relative;
+}
+.slide .inner{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 90vh;
+	clip: rect(auto, auto, auto, auto);
+	clip-path: inset(0 0 0 0);
+}
+/*~Nav*/
+header{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	height: 3rem;
+	z-index: 199;
+	background: #fff;
+}
+.logo{
+	position: absolute;
+	left: 11vw;
+	top: 1rem;
+}
+.logo img{
+	max-height: 3rem;
+}
+nav{
+	position: absolute;
+	right: 11vw;
+	top: 1rem;
+}
+nav li{
+	float: left;
+	display: block;
+	margin: 0 0 0 2em;
+}
+/*~Title*/
+.title{
+	padding: 0 0 0 11vw;
+	width: 50vw;
+}
+h1{
+	color: #444;
+	font-weight: 700;
+	font-size: 3.5rem;
+	line-height: 1.06;
+	font-family: "Calluna", "Title Serif", "Source Han Serif SC","Songti SC", Simsun, serif;
+}
+.left-in,
+.right-in{
+	transition: all .5s cubic-bezier(.7, 0, .1, 1) 0s;
+	display: block;
+	transform: translateX(-3rem);
+	opacity: 0;
+}
+.left-in.in-view{
+	transform: translateX(0);
+	opacity: 1;
+}
+.ani-2{
+	transition-delay: .035s;
+}
+.ani-3{
+	transition-delay: .07s;
+}
+.right-in{
+	transform: translateX(1rem);
+}
+.right-in.in-view{
+	transform: translateX(0);
+	opacity: 1;
+}
+.slide-yellow h1{
+	color: #222;
+}
+.slide-yellow a{
+	color: #222;
+}
+h2{
+	font-weight: 400;
+	font-size: 1rem;
+}
+.title a{
+	display: inline-block;
+	position: relative;
+}
+.title a:after{
+	display: block;
+	content: "";
+	height: .25em;
+	background: #ffe324;
+	position: absolute;
+	width: 100%;
+	bottom: .18em;
+	z-index: -999;
+	left: 0;
+	transition: all .15s cubic-bezier(.9, 0, .1, 1);
+/*	animation: underline-in .5s cubic-bezier(.9, 0, .1, 1)  0s 1;*/
+}
+.slide-yellow a:after{
+	background: #fff;
+}
+@keyframes underline-in {
+	0%{width: 0;}
+	30%{width: 0;}
+	100%{width: 100%;}
+}
+.title a:hover{
+	color: #111;
+}
+.title a:hover:after{
+	height: 83%;
+}
+.number{
+	background: #ffe324;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	text-align: center;
+	border-radius: .5em;
+	font-family: Calluna Sans;
+	position: absolute;
+	left: -1.3em;
+	top: -.1em;
+}
+.slide ol{
+	font-size: 1.125rem;
+	line-height: 1.5;
+	margin: 1em 0 0;
+}
+/*~Hero*/
+.hero{
+	position: fixed;
+	display: block;
+	right: 0;
+	top: 5vh;
+	height: 80vh;
+	max-width: 55vw;
+}
+.hero img{
+	max-height: 100%;
+}
+.slide-intro .hero{
+	position: absolute;
+}
+.slide-yellow{
+	background: #ffe324;
+}
+/*~Slides*/
+.slide-intro h1 span{
+	position: relative;
+}
+.slide-intro h1 .square{
+	height: .5rem;
+	display: inline;
+	position: relative;
+	width: 0;
+	height: 0;
+}
+.square:before{
+	position: absolute;
+	height: .5rem;
+	content: "";	
+	bottom: 0;
+	width: 100vw;
+	background: #ffe324;
+}
+.square-1:before{
+	right: 2rem;
+}
+.square-2:before{
+	left: 3rem;
+}
+.slide-faq .hero{
+	position: absolute;
+	right: none;
+	left: 40vw;
+	top: 30vh;
+	padding: 0;
+}
+dl{
+	background: #fff;
+}
+dt:before,
+dd:before{
+	font-size: 1.125rem;
+	color: #ffe324;
+	font-weight: 700;
+	display: inline-block;
+	width: 1.3em;
+	text-align: right;
+	padding-right: .3em;
+}
+dt:before{
+	content: "Q: ";
+}
+dd:before{
+	content: "A: ";
+}
+dt{
+	font-size: 1.125rem;
+	margin-top: 1rem;
+	font-weight: 700;
+}
+dd{
+	font-size: 1.125rem;
+	margin-bottom: 1rem;
+	color: #999;
+	font-weight: 300;
+}
+/*~Footer*/
+footer{
+	font-size: .875rem;
+	clear: both;
+	text-align: center;
+	background: #ffe324;
+	color: #222;
+}
+footer .inner{
+	padding: 2rem;
+}
+footer a{
+	color: #222;
+}
