@@ -20,7 +20,7 @@ ol{
 	list-style-position: inside;
 }
 .dumb-space{
-	letter-spacing: -.15em;
+	letter-spacing: -.13em;
 }
 @font-face {
 	font-family: 'Title Serif';
@@ -56,19 +56,22 @@ ol{
 /*~Nav*/
 header{
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
-	height: 3rem;
+	height: .625rem;
 	z-index: 199;
-	background: #fff;
+	background: #ffe324;
+}
+.slide-intro header{
+	position: absolute;
 }
 .logo{
 	position: absolute;
 	left: 11vw;
-	top: 1rem;
+	top: .6rem;
 }
 .logo img{
-	max-height: 3rem;
+	max-height: 7rem;
 }
 nav{
 	position: absolute;
@@ -90,7 +93,7 @@ h1{
 	font-weight: 700;
 	font-size: 3.5rem;
 	line-height: 1.06;
-	font-family: "Calluna", "Title Serif", "Source Han Serif SC","Songti SC", Simsun, serif;
+	font-family: "Calluna", "Title Serif", "Source Han Serif SC","Songti SC", SimSun, serif;
 }
 .left-in,
 .right-in{
@@ -164,10 +167,12 @@ h2{
 	height: 1em;
 	text-align: center;
 	border-radius: .5em;
-	font-family: Calluna Sans;
 	position: absolute;
 	left: -1.3em;
 	top: -.1em;
+	-moz-font-feature-settings: 'tnum';
+	-webkit-font-feature-settings: 'tnum';		
+	font-feature-settings: 'tnum';
 }
 .slide ol{
 	font-size: 1.125rem;
@@ -220,8 +225,8 @@ h2{
 .slide-faq .hero{
 	position: absolute;
 	right: none;
-	left: 40vw;
-	top: 30vh;
+	left: 50vw;
+	top: 20vh;
 	padding: 0;
 }
 dl{
@@ -230,29 +235,46 @@ dl{
 dt:before,
 dd:before{
 	font-size: 1.125rem;
-	color: #ffe324;
+	color: #222;
+	background: #ffe324;
+	width: 1em;
+	height: 1em;
 	font-weight: 700;
 	display: inline-block;
-	width: 1.3em;
-	text-align: right;
-	padding-right: .3em;
+	text-align: center;
+	padding: .4em;
+	line-height: 1;
+	border-radius: 1.1em;
+	margin: 0 .5em 0 0;
 }
 dt:before{
-	content: "Q: ";
+	content: "Q";
 }
 dd:before{
-	content: "A: ";
+	content: "A";
+	background: #eee;
+	color: #222;
 }
 dt{
 	font-size: 1.125rem;
-	margin-top: 1rem;
+	margin: 1rem 0 .3rem;
 	font-weight: 700;
 }
 dd{
 	font-size: 1.125rem;
-	margin-bottom: 1rem;
-	color: #999;
-	font-weight: 300;
+	margin-bottom: 1.6rem;
+	color: #777;
+	font-weight: 400;
+}
+dd a{
+	color: #777;
+	border-bottom: .15em solid #ffe324;
+	transition: all .15s cubic-bezier(.9, 0, .1, 1);
+}
+dd a:hover{
+	color: #222;
+	background: #ffe324;
+	border-width: 0;
 }
 /*~Footer*/
 footer{
