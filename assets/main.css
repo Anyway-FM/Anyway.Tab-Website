@@ -16,6 +16,10 @@ a{
 	color: #333;
 	text-decoration: none;
 }
+::selection{ 
+	background: #ffe324;
+	color: #222;
+}
 ol{
 	list-style-position: inside;
 }
@@ -73,16 +77,6 @@ header{
 .logo img{
 	max-height: 7rem;
 }
-nav{
-	position: absolute;
-	right: 11vw;
-	top: 1rem;
-}
-nav li{
-	float: left;
-	display: block;
-	margin: 0 0 0 2em;
-}
 /*~Title*/
 .title{
 	padding: 0 0 0 11vw;
@@ -94,6 +88,9 @@ h1{
 	font-size: 3.5rem;
 	line-height: 1.06;
 	font-family: "Calluna", "Title Serif", "Source Han Serif SC","Songti SC", SimSun, serif;
+	-moz-font-feature-settings: 'lnum';
+	-webkit-font-feature-settings: 'lnum';
+	font-feature-settings: 'lnum';	
 }
 .left-in,
 .right-in{
@@ -111,6 +108,15 @@ h1{
 }
 .ani-3{
 	transition-delay: .07s;
+}
+.ani-4{
+	transition-delay: .08s;
+}
+.ani-5{
+	transition-delay: .09s;
+}
+.ani-6{
+	transition-delay: .1s;
 }
 .right-in{
 	transform: translateX(1rem);
@@ -174,10 +180,18 @@ h2{
 	-webkit-font-feature-settings: 'tnum';		
 	font-feature-settings: 'tnum';
 }
-.slide ol{
+.instructions{
 	font-size: 1.125rem;
 	line-height: 1.5;
 	margin: 1em 0 0;
+	list-style: none;
+}
+.instructions .bullet{
+	margin: 0 .3em 0 0;
+	font-weight: 700;
+	-moz-font-feature-settings: 'tnum';
+	-webkit-font-feature-settings: 'tnum';		
+	font-feature-settings: 'tnum';
 }
 /*~Hero*/
 .hero{
@@ -229,12 +243,12 @@ h2{
 	top: 20vh;
 	padding: 0;
 }
-dl{
+.faq{
 	background: #fff;
+	font-size: 1rem;
 }
 dt:before,
 dd:before{
-	font-size: 1.125rem;
 	color: #222;
 	background: #ffe324;
 	width: 1em;
@@ -256,12 +270,10 @@ dd:before{
 	color: #222;
 }
 dt{
-	font-size: 1.125rem;
 	margin: 1rem 0 .3rem;
 	font-weight: 700;
 }
 dd{
-	font-size: 1.125rem;
 	margin-bottom: 1.6rem;
 	color: #777;
 	font-weight: 400;
@@ -289,4 +301,112 @@ footer .inner{
 }
 footer a{
 	color: #222;
+}
+@media screen and (max-width: 1300px) {
+	h1{
+		font-size: 3rem;
+	}
+}
+@media screen and (max-width: 1200px) {
+	h1{
+		font-size: 2.5rem;
+	}
+	h2,
+	.instructions,
+	.faq{
+		font-size: .875rem;
+	}
+}
+@media screen and (max-width: 1100px) {
+	h1{
+		font-size: 2rem;
+	}
+	h2,
+	.instructions,
+	.faq{
+		font-size: .75rem;
+	}
+	.slide-faq .hero{
+		top: 25vh;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.slide{
+		height: auto;
+	}
+	.slide .inner{
+		position: static;
+		clip: none;
+		display: block;
+		height: auto;
+		padding: 1rem 0;
+	}
+	header{
+		display: none;
+	}
+	.hero{
+		position: static;
+		width: 100%;
+		max-width: none;
+		top: none;
+		right: none;
+		height: auto;
+	}
+	.slide-intro .hero{
+		position: static;
+	}
+	.slide-faq .hero{
+		position: static;
+		right: none;
+		left: none;
+		top: none;
+	}
+	.hero img{
+		max-height: none;
+		max-width: 100%;
+	}
+	.title{
+		width: 100%;
+		padding: 0;
+		height: auto;
+		text-align: center;
+		margin: 4rem 0 0;
+	}
+	.faq,
+	.instructions{
+		text-align: left;
+		padding: 0 3rem;
+	}
+	.square:before{
+		display: none;
+	}
+	h1{
+		font-size: 3.5rem;
+		line-height: 1.25;
+	}
+	h2,
+	.instructions,
+	.faq{
+		font-size: 1.25rem;
+	}
+}
+@media screen and (max-width: 900px) {
+	h1{
+		font-size: 2rem;
+	}
+	h2,
+	.instructions,
+	.faq{
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 800px) {
+	h1{
+		font-size: 1.75rem;
+	}
+	h2,
+	.instructions,
+	.faq{
+		font-size: .75rem;
+	}
 }
