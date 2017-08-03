@@ -14,3 +14,20 @@
     font-style: normal;
     font-display: fallback;    
 }
+@font-face {
+    font-family: 'Anyway Serif';
+	src: url('http://anyway-web.b0.upaiyun.com/font/calluna-bold.woff') format('woff'),
+    		url('http://anyway-web.b0.upaiyun.com/font/calluna-bold.woff2') format('woff2'),
+    		url('http://anyway-web.b0.upaiyun.com/font/calluna-bold.eot') format('eot');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;    
+}
+/*@font-face {
+    font-family: 'Anyway Serif';
+	src: url('http://anyway-web.b0.upaiyun.com/font/calluna-regular.woff') format('woff'),
+    		url('http://anyway-web.b0.upaiyun.com/font/calluna-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;    
+}*/

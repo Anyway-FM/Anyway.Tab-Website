@@ -10,7 +10,10 @@
 body{
 	background: #fff;
 	color: #333;
-	font-family: "Calluna Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+	font-family: "Anyway Type", "PingFang SC", "Microsoft YaHei", sans-serif;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 a{
 	color: #333;
@@ -62,6 +65,7 @@ header{
 	width: 100%;
 	position: fixed;
 	top: 0;
+	left: 0;
 	height: .625rem;
 	z-index: 199;
 	background: #ffe324;
@@ -73,6 +77,13 @@ header{
 	position: absolute;
 	left: 11vw;
 	top: .6rem;
+}
+.logo a{
+	background: #ffe324;
+	display: block;
+}
+.logo a:hover{
+	background: #f3d822;
 }
 .logo img{
 	max-height: 7rem;
@@ -86,8 +97,8 @@ h1{
 	color: #444;
 	font-weight: 700;
 	font-size: 3.5rem;
-	line-height: 1.06;
-	font-family: "Calluna", "Title Serif", "Source Han Serif SC","Songti SC", SimSun, serif;
+	line-height: 1.12;
+	font-family: "Anyway Serif", "Title Serif", "Source Han Serif SC","Songti SC", SimSun, serif;
 	-moz-font-feature-settings: 'lnum';
 	-webkit-font-feature-settings: 'lnum';
 	font-feature-settings: 'lnum';	
@@ -134,6 +145,7 @@ h1{
 h2{
 	font-weight: 400;
 	font-size: 1rem;
+	margin: .4em 0 0;
 }
 .title a{
 	display: inline-block;
@@ -146,7 +158,7 @@ h2{
 	background: #ffe324;
 	position: absolute;
 	width: 100%;
-	bottom: .18em;
+	bottom: .05em;
 	z-index: -999;
 	left: 0;
 	transition: all .15s cubic-bezier(.9, 0, .1, 1);
@@ -164,21 +176,22 @@ h2{
 	color: #111;
 }
 .title a:hover:after{
-	height: 83%;
+	height: 94%;
 }
 .number{
 	background: #ffe324;
 	display: inline-block;
-	width: 1em;
-	height: 1em;
+	width: 1.2em;
+	height: 1.2em;
 	text-align: center;
-	border-radius: .5em;
+	border-radius: .6em;
 	position: absolute;
-	left: -1.3em;
+	left: -1.5em;
 	top: -.1em;
+	padding: .05em .1em .15em;
 	-moz-font-feature-settings: 'tnum';
 	-webkit-font-feature-settings: 'tnum';		
-	font-feature-settings: 'tnum';
+	font-feature-settings: 'lnum';
 }
 .instructions{
 	font-size: 1.125rem;
@@ -200,7 +213,7 @@ h2{
 	right: 0;
 	top: 5vh;
 	height: 80vh;
-	max-width: 55vw;
+	max-width: 50vw;
 }
 .hero img{
 	max-height: 100%;
@@ -229,6 +242,7 @@ h2{
 	bottom: 0;
 	width: 100vw;
 	background: #ffe324;
+	display: none;
 }
 .square-1:before{
 	right: 2rem;
@@ -301,6 +315,20 @@ footer .inner{
 }
 footer a{
 	color: #222;
+}
+/*~Fullscreen*/
+#fullscreen {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9999;
+	background: #fff;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#fullscreen .slide-intro {
+	background: #fff;
 }
 @media screen and (max-width: 1300px) {
 	h1{
