@@ -30,7 +30,7 @@
 				</div>
 				
 				<header>
-					<div class="logo"><img src="assets/badge.png"/></div>
+					<div class="logo"><a href="http://Anyway.FM" title="返回 Anyway.FM 官网"><img src="assets/badge.png"/></a></div>
 				</header>
 				
 				<div class="hero right-in">
@@ -44,7 +44,7 @@
 				
 				<div class="title">
 					<h1><span class="left-in ani-1">由设计杂谈播客 </span><span class="left-in ani-2"><a href="#">Anyway.FM</a><span class="dumb-space">&nbsp;</span>出品</span></h1>
-					<h2 class="left-in ani-3">点此查看<a href="#">订阅方式</a></h2>
+					<!--<h2 class="left-in ani-3">点此查看<a href="#">订阅方式</a></h2>-->
 				</div>
 				
 				<div class="hero">
@@ -58,7 +58,7 @@
 			<div class="inner">
 				
 				<div class="title">
-					<h1 class="left-in"><span class="left-in ani-1">Anyway.Tab</span><span class="left-in ani-2">有且仅有</span><span class="left-in ani-3">2<span class="dumb-space">&nbsp;</span>个功能</span></h1>
+					<h1 class="left-in"><span class="left-in ani-1">Anyway.Tab</span><span class="left-in ani-2">有且仅有<span class="dumb-space">&nbsp;</span>2<span class="dumb-space">&nbsp;</span>个功能</span></h1>
 				</div>
 
 				<div class="hero">
@@ -168,13 +168,11 @@
 				</div>
 				
 				<header>
-					<div class="logo"><img src="assets/badge.png"/></div>
+					<div class="logo"><a href="http://Anyway.FM" title="返回 Anyway.FM 官网"><img src="assets/badge.png"/></a></div>
 				</header>
 
 			</div>
 		</section>
-		
-		
 	</main>
 	
 	<footer class="responsive">
@@ -182,6 +180,32 @@
 			© 2017 <a href="http://anyway.fm">Anyway.FM</a> 保留所有权利</a>
 		</div>
 	</footer>
+	
+	<div id="fullscreen">
+		<section class="slide slide-intro">
+			<div class="inner">
+				<div class="title">
+					<h1><span class="left-in ani-1"><span class="square square-1"></span>Anyway.Tab<span class="dumb-space">&nbsp;</span>是一款<span class="square square-2"></span> </span><span class="left-in ani-2">Chrome<span class="dumb-space">&nbsp;</span>浏览器插件</span></h1>
+					<h2 class="left-in ani-3">既然你用的不是<span class="dumb-space">&nbsp;</span>Chrome<span class="dumb-space">&nbsp;</span>那也没必要看下去啦~ 😝</h2>
+				</div>
+				
+				<header>
+					<div class="logo"><a href="http://Anyway.FM" title="返回 Anyway.FM 官网"><img src="assets/badge.png"/></a></div>
+				</header>
+				
+				<div class="hero right-in">
+					<img src="assets/1.png"/>
+				</div>
+			</div>
+		</section>
+		
+		<footer class="responsive">
+			<div class="inner">
+				© 2017 <a href="http://anyway.fm">Anyway.FM</a> 保留所有权利</a>
+			</div>
+		</footer>
+		
+	</div>
 	
 
 <script type="text/javascript">
@@ -197,6 +221,23 @@
 //	    	var reg = new RegExp('(\\s|^)' + "in-view" + '(\\s|$)');
 //	    	    el.className=el.className.replace(reg, '');
 //	    });
+</script>
+
+<script type="text/javascript">
+	var isChromium = window.chrome,
+	    winNav = window.navigator,
+	    vendorName = winNav.vendor,
+	    isOpera = winNav.userAgent.indexOf("OPR") > -1,
+	    isIEedge = winNav.userAgent.indexOf("Edge") > -1,
+	    isIOSChrome = winNav.userAgent.match("CriOS");
+	
+	if(isIOSChrome){
+	   document.getElementsById("fullscreen").style.color = "red"
+	} else if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
+
+	} else { 
+	    document.getElementById("fullscreen").style.display="block";
+	}
 </script>
 
 	
