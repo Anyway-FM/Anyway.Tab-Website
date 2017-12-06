@@ -4,12 +4,12 @@ var gulp = require('gulp'),
  
 var cdnUrl = [
 	[ '<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"assets/fonts.css\" type=\"text/css\" media=\"all\" />', '' ],
-	[ 'assets/in-view.min.js', 'http://anyway-web.b0.upaiyun.com/js/in-view.min.js' ],
-	[ 'assets/', 'http://anyway-web.b0.upaiyun.com/anyway.tab/' ]
+	[ 'assets/in-view.min.js', 'https://anyway-web.b0.upaiyun.com/js/in-view.min.js' ],
+	[ 'assets/', 'https://anyway-web.b0.upaiyun.com/anyway.tab/' ]
 ];
 
 var fontUrl = [
-	[ 'fonts/', 'http://anyway-web.b0.upaiyun.com/anyway.tab/' ]
+	[ 'fonts/', 'https://anyway-web.b0.upaiyun.com/anyway.tab/' ]
 ];
 
  
