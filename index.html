@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cmn-Hans">
+<html lang="zh-cmn-Hans">
 <head>
 	<title>Anyway.Tab - Chrome 浏览器新建 Tab 插件</title>
 
 	<meta charset="UTF-8">
 	<meta name="author" content="JJ Ying" />
 	<meta name="description" content="来自 Anyway.FM 的一款 Chrome 浏览器新建 Tab 插件" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	
 	<link rel="shortcut icon" href="assets/favicon.png" />
 	<link rel="stylesheet" rev="stylesheet" href="assets/fonts.css" type="text/css" media="all" />
 	<link rel="stylesheet" rev="stylesheet" href="assets/main.css" type="text/css" media="all" />
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/jaoejhbbokpmbndhdopikidehkadhake">
 	
 	<script type="text/javascript" src="assets/in-view.min.js"></script>
 	
@@ -26,7 +27,7 @@
 				
 				<div class="title">
 					<h1><span class="left-in ani-1"><span class="square square-1"></span>Anyway.Tab<span class="dumb-space">&nbsp;</span>是一款<span class="square square-2"></span> </span><span class="left-in ani-2">Chrome<span class="dumb-space">&nbsp;</span>浏览器插件</span></h1>
-					<h2 class="left-in ani-3">不想看废话的可直接去<span class="dumb-space">&nbsp;</span><a href="https://chrome.google.com/webstore/detail/anywaytab/jaoejhbbokpmbndhdopikidehkadhake">Chrome<span class="dumb-space">&nbsp;</span>应用商店下载</a></h2>
+					<h2 class="left-in ani-3">不想看废话的可直接<a  onclick="chrome.webstore.install()">点此安装体验</a></h2>
 				</div>
 				
 				<header>
@@ -44,7 +45,6 @@
 				
 				<div class="title">
 					<h1><span class="left-in ani-1">由设计杂谈播客 </span><span class="left-in ani-2"><a href="https://Anyway.FM">Anyway.FM</a><span class="dumb-space">&nbsp;</span>出品</span></h1>
-					<!--<h2 class="left-in ani-3">点此查看<a href="#">订阅方式</a></h2>-->
 				</div>
 				
 				<div class="hero">
@@ -116,9 +116,9 @@
 			<div class="inner">
 				
 				<div class="title">
-					<h1><span  class="left-in">如果能那个，</span><span  class="left-in ani-2"><a href="https://chrome.google.com/webstore/detail/anywaytab/jaoejhbbokpmbndhdopikidehkadhake">去<span class="dumb-space">&nbsp;</span>Chrome<span class="dumb-space">&nbsp;</span>商店安装</a></span></h1>
+					<h1><span  class="left-in">如果能那个，</span><span  class="left-in ani-2"><a onclick="chrome.webstore.install()" id="install-button">点这里直接安装</a></span></h1>
 				</div>
-				
+
 				<div class="hero">
 					<img src="assets/5.png"/>
 				</div>
@@ -216,10 +216,6 @@
 	    .on('enter', el => {
 	        el.className += " in-view";
 	    })
-//	    .on('exit', el => {
-//	    	var reg = new RegExp('(\\s|^)' + "in-view" + '(\\s|$)');
-//	    	    el.className=el.className.replace(reg, '');
-//	    });
 </script>
 
 <script type="text/javascript">

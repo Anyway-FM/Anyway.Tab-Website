@@ -103,6 +103,10 @@ h1{
 	-webkit-font-feature-settings: 'lnum';
 	font-feature-settings: 'lnum';	
 }
+h1 a {
+	cursor: pointer;
+}
+
 .left-in,
 .right-in{
 	transition: all .5s cubic-bezier(.7, 0, .1, 1) 0s;
