@@ -4,8 +4,8 @@ var gulp = require('gulp'),
 
 var cdnUrl = [
 	[ '<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"assets/fonts.css\" type=\"text/css\" media=\"all\" />', '' ],
-	[ 'assets/in-view.min.js', 'https://anyway-web.b0.upaiyun.com/js/in-view.min.js' ],
-	[ 'assets/', 'https://anyway-web.b0.upaiyun.com/anyway.tab/' ]
+	[ 'assets/in-view.min.js', 'https://s.anw.red/js/in-view.min.js' ],
+	[ 'assets/', 'https://s.anw.red/anyway.tab/' ]
 ];
 
 var fontUrl = [
@@ -21,11 +21,11 @@ gulp.task('default', function() {
 		.pipe(gulp.dest('builds'));
 
 	gulp.src('assets/fonts/*.*')
-	        .pipe(gulp.dest('builds'));
+    .pipe(gulp.dest('builds'));
 
 	gulp.src('*.svg')
-	        .pipe(plugins.svgo())
-	        .pipe(gulp.dest('builds'));
+    .pipe(plugins.svgo())
+    .pipe(gulp.dest('builds'));
 
 	gulp.src(['assets/*.css','!assets/*.min.css'])
 		.pipe(plugins.concat('main.css'))
